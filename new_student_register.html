@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cosmic+Sans">
+
+    <style>
+        body {
+            font-family: 'Cosmic Sans', sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #000;
+            color: #45C04C;
+            border: none;
+            cursor: pointer;
+        }
+
+        button.cancel {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="registrationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+
+        <label for="telephone">Telephone:</label>
+        <input type="tel" id="telephone" name="telephone" required>
+
+        <label for="time">Time of Arrival:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="htmlforms@plp.com">
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" required>
+
+        <button type="submit">Register</button>
+        <button type="button" class="cancel" onclick="cancelRegistration()">Cancel</button>
+    </form>
+
+    <script>
+        function cancelRegistration() {
+            document.getElementById("registrationForm").reset();
+        }
+    </script>
+
+</body>
+</html>
